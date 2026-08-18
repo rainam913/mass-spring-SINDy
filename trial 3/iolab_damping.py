@@ -10,7 +10,7 @@ plt.rcParams.update({
 })
 
 # load data
-df = pd.read_csv("trial3_clean.csv")
+df = pd.read_csv("trial3_cut.csv")
 df.columns = df.columns.str.strip()
 
 t = df["time"].values
