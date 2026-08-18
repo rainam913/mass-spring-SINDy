@@ -1,0 +1,262 @@
+SINDy/STLSQ identification, full cubic library  (fit_tol005.py)
+pysindy 2.1.0 | polynomial degree 3 | central-difference derivatives | STLSQ: alpha = 0.0, normalize_columns = True | TOL = 0.005
+R^2 (derivative): pointwise fit to the differenced derivatives (both equations, uniform average).
+R^2 (simulation): selected model integrated from measured (x0, v0), simulated vs measured position.
+==============================================================================
+
+##############################################################################
+##  DATASET: RAW
+##############################################################################
+
+--- RAW T1 ------------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.808231
+     0.012     18    0.808227
+     0.024     16    0.808192
+     0.035     13    0.808123
+     0.143     11    0.807655
+     2.424      9    0.805579  <-- selected
+     3.455      6    0.791682
+     4.924      5    0.293198
+     7.017      3    0.255717
+    10.000      2    0.248416
+    28.943      0   -0.000003
+
+Selected: threshold = 2.42446, 9 nonzero terms
+R^2 (derivative) = 0.805579   (best in sweep 0.808231)
+
+Identified system:
+    x' = +0.997 v
+    v' = -40.47 x -1.507 v +418.5 x^2 +50.4 x v -3.169 v^2 +2486 x^3 +1826 x^2 v -124.4 x v^2
+
+Second-order form:
+    x'' = -40.47 x -1.507 x' +418.5 x^2 +50.4 x x' -3.169 x'^2 +2486 x^3 +1826 x^2 x' -124.4 x x'^2
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T1: -0.0751
+
+--- RAW T2 ------------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.821427
+     0.017     18    0.821422
+     0.024     17    0.821413
+     0.035     14    0.821331
+     0.049     13    0.821315
+     0.143     11    0.820854
+     2.424     10    0.820403  <-- selected
+     3.455      6    0.801752
+     4.924      3    0.267234
+    14.251      2    0.257955
+    28.943      0   -0.000003
+
+Selected: threshold = 2.42446, 10 nonzero terms
+R^2 (derivative) = 0.820403   (best in sweep 0.821427)
+
+Identified system:
+    x' = +0.9972 v
+    v' = -0.08108 -40.02 x -1.376 v +431.9 x^2 +47.99 x v -2.828 v^2 +2669 x^3 +1746 x^2 v -139.2 x v^2
+
+Second-order form:
+    x'' = -0.08108 -40.02 x -1.376 x' +431.9 x^2 +47.99 x x' -2.828 x'^2 +2669 x^3 +1746 x^2 x' -139.2 x x'^2
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T2: -0.1699
+
+--- RAW T3 ------------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.819584
+     0.001     19    0.819584
+     0.017     17    0.819575
+     0.024     15    0.819540
+     0.035     14    0.819502
+     0.049     13    0.819489
+     0.143     11    0.819008
+     0.412     10    0.818948  <-- selected
+     3.455      6    0.806277
+     4.924      4    0.288386
+     7.017      3    0.271555
+    10.000      2    0.263132
+    28.943      0   -0.000000
+
+Selected: threshold = 0.412463, 10 nonzero terms
+R^2 (derivative) = 0.818948   (best in sweep 0.819584)
+
+Identified system:
+    x' = +0.9973 v
+    v' = -44.37 x -0.8294 v +423.8 x^2 +41.98 x v -2.718 v^2 +2939 x^3 +1713 x^2 v -111.1 x v^2 -4.959 v^3
+
+Second-order form:
+    x'' = -44.37 x -0.8294 x' +423.8 x^2 +41.98 x x' -2.718 x'^2 +2939 x^3 +1713 x^2 x' -111.1 x x'^2 -4.959 x'^3
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T3: -0.1071
+
+--- RAW POOLED (T1+T2+T3) ---------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.815029
+     0.017     19    0.815028
+     0.024     18    0.815027
+     0.035     17    0.815018
+     0.049     15    0.814970
+     0.070     13    0.814926
+     0.289     11    0.814457
+     3.455     10    0.813310
+     4.924      9    0.812775  <-- selected
+     7.017      5    0.300400
+    10.000      3    0.264036
+    20.309      2    0.255704
+    58.780      0   -0.000002
+
+Selected: threshold = 4.92388, 9 nonzero terms
+R^2 (derivative) = 0.812775   (best in sweep 0.815029)
+
+Identified system:
+    x' = +0.9972 v
+    v' = -41.07 x -1.478 v +415.5 x^2 +46.25 x v -2.932 v^2 +2627 x^3 +1782 x^2 v -127.8 x v^2
+
+Second-order form:
+    x'' = -41.07 x -1.478 x' +415.5 x^2 +46.25 x x' -2.932 x'^2 +2627 x^3 +1782 x^2 x' -127.8 x x'^2
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T1: -0.0751
+    T2: -0.1162
+    T3: -0.1071
+
+##############################################################################
+##  DATASET: TRIMMED
+##############################################################################
+
+--- TRIMMED T1 --------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.926954
+     0.001     18    0.926953
+     0.006     17    0.926953
+     0.008     15    0.926951
+     0.012     13    0.926948
+     0.024     12    0.926930
+     0.143     10    0.926187
+     0.203      9    0.926176
+     0.838      8    0.925906
+     2.424      5    0.923705  <-- selected
+     3.455      3    0.917326
+     4.924      1    0.403677
+    28.943      0   -0.006674
+
+Selected: threshold = 2.42446, 5 nonzero terms
+R^2 (derivative) = 0.923705   (best in sweep 0.926954)
+
+Identified system:
+    x' = +0.9974 v
+    v' = -0.2477 -61.31 x -1.54 v +4.831 v^3
+
+Second-order form:
+    x'' = -0.2477 -61.31 x -1.54 x' +4.831 x'^3
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T1: 0.9307
+
+--- TRIMMED T2 --------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     18    0.925702
+     0.008     17    0.925700
+     0.017     15    0.925696
+     0.024     13    0.925670
+     0.035     12    0.925663
+     0.143     11    0.924961
+     0.289      9    0.924931
+     1.701      8    0.923806  <-- selected
+     3.455      5    0.916820
+     4.924      2    0.395612
+     7.017      1    0.390961
+    28.943      0   -0.007076
+
+Selected: threshold = 1.70125, 8 nonzero terms
+R^2 (derivative) = 0.923806   (best in sweep 0.925702)
+
+Identified system:
+    x' = +0.9976 v
+    v' = -0.4046 -68.75 x -2.03 v +206 x^2 +5568 x^3 +714.2 x^2 v +5.725 v^3
+
+Second-order form:
+    x'' = -0.4046 -68.75 x -2.03 x' +206 x^2 +5568 x^3 +714.2 x^2 x' +5.725 x'^3
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T2: 0.8285
+
+--- TRIMMED T3 --------------------------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     17    0.936819
+     0.004     16    0.936818
+     0.006     14    0.936818
+     0.008     13    0.936818
+     0.012     12    0.936816
+     0.017     11    0.936810
+     0.070     10    0.936809
+     0.143      9    0.936048
+     0.203      8    0.936033
+     1.194      7    0.935770
+     1.701      5    0.935008  <-- selected
+     2.424      3    0.930904
+     3.455      2    0.926239
+     4.924      1    0.420814
+    28.943      0   -0.006578
+
+Selected: threshold = 1.70125, 5 nonzero terms
+R^2 (derivative) = 0.935008   (best in sweep 0.936819)
+
+Identified system:
+    x' = +0.9977 v
+    v' = -0.1376 -61.6 x -1.474 v +4.374 v^3
+
+Second-order form:
+    x'' = -0.1376 -61.6 x -1.474 x' +4.374 x'^3
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T3: 0.9261
+
+--- TRIMMED POOLED (T1+T2+T3) -----------------------------------
+
+    thresh  terms  R2 (deriv)
+     0.001     20    0.927441
+     0.001     19    0.927441
+     0.002     18    0.927441
+     0.008     17    0.927440
+     0.024     14    0.927435
+     0.035     12    0.927420
+     0.070     11    0.927419
+     0.100     10    0.927418
+     0.289      9    0.926685
+     1.701      8    0.926332
+     4.924      5    0.922969  <-- selected
+     7.017      1    0.404732
+    58.780      0   -0.006767
+
+Selected: threshold = 4.92388, 5 nonzero terms
+R^2 (derivative) = 0.922969   (best in sweep 0.927441)
+
+Identified system:
+    x' = +0.9976 v
+    v' = -0.2205 -66.34 x -0.8782 v +2850 x^3
+
+Second-order form:
+    x'' = -0.2205 -66.34 x -0.8782 x' +2850 x^3
+    (nonlinear terms present - no single (omega_n, zeta) summary)
+
+R^2 (simulation), position trajectory from each measured (x0, v0):
+    T1: 0.8899
+    T2: 0.9405
+    T3: 0.8608
