@@ -27,7 +27,6 @@ custom_lib = ps.CustomLibrary(
     library_functions=library_functions, 
     function_names=library_function_names
 )
-# -------------------------------------
 
 model = ps.SINDy(
     differentiation_method=ps.SmoothedFiniteDifference(),

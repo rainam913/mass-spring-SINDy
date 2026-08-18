@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Load and clean data
-df = pd.read_csv("/Users/rainamajumder/Desktop/sindy things/sindy iolab/trial 3/trial3_raw.csv")
+df = pd.read_csv("sindy iolab/trial 3/trial3_raw.csv")
 df.columns = df.columns.str.strip()
 
 t = df["time"].values

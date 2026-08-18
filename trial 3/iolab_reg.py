@@ -4,7 +4,7 @@ import pysindy as ps
 import matplotlib.pyplot as plt
 
 # Load data
-df = pd.read_csv("trial3_data_clean.csv")
+df = pd.read_csv("trial3_clean.csv")
 df.columns = df.columns.str.strip()
 
 t = df["time"].values

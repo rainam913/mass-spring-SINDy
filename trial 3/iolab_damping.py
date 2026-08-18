@@ -3,26 +3,20 @@ import pandas as pd
 import pysindy as ps
 import matplotlib.pyplot as plt
 
-# -------------------------------
-# High-quality plotting defaults
-# -------------------------------
+
 plt.rcParams.update({
     "figure.dpi": 180,        # sharper display in notebook
     "savefig.dpi": 400       # high-res if saved
 })
 
-# -------------------------------
-# Load Data
-# -------------------------------
+# load data
 df = pd.read_csv("trial3_clean.csv")
 df.columns = df.columns.str.strip()
 
 t = df["time"].values
 X = df[["cal[0]", "cal[1]"]].values
 
-# -------------------------------
-# Custom Library
-# -------------------------------
+# custom library
 library_functions = [
     lambda x: np.ones_like(x),   # constant
     lambda x: x,                # linear
@@ -40,9 +34,7 @@ custom_lib = ps.CustomLibrary(
     function_names=library_function_names
 )
 
-# -------------------------------
-# Train Model
-# -------------------------------
+# train model
 model = ps.SINDy(
     differentiation_method=ps.SmoothedFiniteDifference(),
     feature_library=custom_lib,
@@ -52,16 +44,12 @@ model = ps.SINDy(
 model.fit(X, t=t)
 model.print()
 
-# -------------------------------
-# Simulate
-# -------------------------------
+# simulate
 x0 = X[0]
 t_sim = np.linspace(t[0], t[-1], len(t))
 X_sim = model.simulate(x0, t_sim)
 
-# -------------------------------
-# Error Calculation
-# -------------------------------
+# error calculations
 eps = 1e-8
 APE = np.abs(X - X_sim) / (np.abs(X) + eps) * 100
 
@@ -80,9 +68,7 @@ for i in range(2):
 exceed_df = pd.DataFrame(exceed_list)
 print(exceed_df)
 
-# -------------------------------
-# High Quality Plots
-# -------------------------------
+# plots
 for i in range(2):
     plt.figure(figsize=(10, 6))
     

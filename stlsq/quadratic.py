@@ -28,7 +28,7 @@ fit_sindy_model(model, X, t, feature_names=["x", "y"])
 print("--- Linear + Quadratic SINDy Model Equations ---")
 model.print()
 
-# --- Custom R^2 Calculation Section ---
+# R^2s
 
 
 def compute_metrics(y_true, y_pred):
