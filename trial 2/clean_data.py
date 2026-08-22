@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # load csv
-filename = "sindy iolab/trial 2/trial2_raw.csv"
+filename = "trial2_raw.csv"
 df = pd.read_csv(filename)
 
 # Clean column names

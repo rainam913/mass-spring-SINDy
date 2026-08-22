@@ -4,7 +4,7 @@ import pandas as pd
 # -----------------------------
 # 1. Load CSV
 # -----------------------------
-filename = "sindy iolab/trial 1/trail1_data_raw.csv"
+filename = "trail1_data_raw.csv"
 df = pd.read_csv(filename)
 
 # Clean column names
